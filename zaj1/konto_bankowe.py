@@ -3,6 +3,8 @@ class KontoBankowe:
         self.__numer_konta = numer_konta  # Prywatny atrybut
         self.__stan_konta = poczatkowy_stan  # Prywatny atrybut
 
+
+    #Dodawnie dodatkowego komentarza
     def wplac_pieniadze(self, kwota):
         if kwota > 0:
             self.__stan_konta += kwota
