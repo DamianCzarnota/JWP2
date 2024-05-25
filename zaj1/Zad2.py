@@ -99,5 +99,5 @@ if __name__ == "__main__":
     print(v1.cross(v2))
     print(v0.cross(v0_2))
 
-    print(Vector3D.are_orthogonal(v0,v0_2))
+    print(Vector3D.are_orthogonal(v0,v3))
 

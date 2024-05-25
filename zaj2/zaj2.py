@@ -39,7 +39,7 @@ print(results)
 
 print("ZADANIE 2")
 
-engine_2 = db.create_engine('sqlite:///college.db', echo = True)
+engine_2 = db.create_engine('sqlite:///college.db')
 meta = db.MetaData()
 
 #creating table
@@ -66,6 +66,19 @@ connection_2.execute(query,values_list)
 query = db.text('SELECT * FROM students')
 result = connection_2.execute(query).fetchall()
 print(result)
+
+
+#CRUD
+
+def create(name,age,grade):
+    engine = db.create_engine('sqlite:///college.db')
+    pass
+def read(id):
+    pass
+def update(id,name,age,grade):
+    pass
+def delete(id):
+    pass
 
 
 
