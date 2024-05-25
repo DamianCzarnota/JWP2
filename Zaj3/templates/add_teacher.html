@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Teacher</title>
+</head>
+<body>
+    <h1>Add New Teacher</h1>
+    <form method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required><br>
+        <label for="time">Time:</label>
+        <input type="text" id="time" name="time" required><br>
+        <button type="submit">Add Teacher</button>
+    </form>
+    <a href="{{ url_for('main.get_all_teachers') }}">Back to all teachers</a>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Teachers</title>
+</head>
+<body>
+    <h1>All Teachers</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Subject</th>
+                <th>Time</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for teacher in teachers %}
+            <tr>
+                <td>{{ teacher.name }}</td>
+                <td>{{ teacher.subject }}</td>
+                <td>{{ teacher.time }}</td>
+                <td>
+                    <form method="POST" action="{{ url_for('main.delete_teacher', id=teacher.id) }}">
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ url_for('main.add_teacher') }}">Add New Teacher</a>
+</body>
+</html>
